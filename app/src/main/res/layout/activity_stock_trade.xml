@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear_layout_stocks_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/image_button_goto_wallet"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:contentDescription="Customer Image"
+            android:visibility="visible"
+            tools:srcCompat="@drawable/customerexample" />
+
+        <TextView
+            android:id="@+id/textview_balance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:text="@string/textview_balance"
+            android:textSize="23sp" />
+
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview_stocks"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp">
+
+    </ListView>
+
+</LinearLayout>

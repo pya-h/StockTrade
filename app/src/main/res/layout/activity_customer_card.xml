@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageCustomer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/customerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aaryaman"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/customerBalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="75 Cents"
+        android:textSize="16sp"
+        android:gravity="center_horizontal"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/stocktext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="List of Bought Stocks"
+        android:textSize="20sp" />
+
+    <ListView
+        android:id="@+id/listview_stocks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

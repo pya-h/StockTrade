@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Stock Trading Simplified.</string>
+    <string name="textview_balance">Balance: %.2f $</string>
+    <string name="button_goto_bank_portal">Bank Portal</string>
+    <string name="button_goto_stock_trade">Stock Trade</string>
+    <string name="str_anonymous">Anonymous</string>
+    <string name="str_price">Price</string>
+    <string name="str_stock">Stock</string>
+    <string name="button_buy">Buy</string>
+    <string name="button_sell">Sell</string>
+</resources>
