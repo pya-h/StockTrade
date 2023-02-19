@@ -21,8 +21,13 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
     TextView balanceTextview, usernameTextView;
-    Button gotoStockTradeButton;
+    Button gotoStockTradeButton, gotoBankPortalButton;
     private static Customer customer;
+
+    public void updateBalance() {
+        balanceTextview.setText(String.format(getString(R.string.textview_balance), customer.getBalance()));
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,15 +36,26 @@ public class MainActivity extends AppCompatActivity {
         usernameTextView = findViewById(R.id.textview_username);
         usernameTextView.setText(customer.getName());
         balanceTextview = findViewById(R.id.textview_balance);
-
-        balanceTextview.setText(String.format(getString(R.string.textview_balance), customer.getBalance()));
         gotoStockTradeButton = findViewById(R.id.button_goto_stock_trade);
-        gotoStockTradeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent stockTradeIntent = new Intent(MainActivity.this, StockTradeActivity.class);
-                startActivity(stockTradeIntent);
-            }
+        gotoStockTradeButton.setOnClickListener(v -> {
+            Intent stockTradeIntent = new Intent(MainActivity.this, StockTradeActivity.class);
+            startActivity(stockTradeIntent);
         });
+        gotoBankPortalButton = findViewById(R.id.button_goto_bank_portal);
+        gotoBankPortalButton.setOnClickListener(v -> {
+            Intent bankPortalIntent = new Intent(MainActivity.this, BankPortalActivity.class);
+            startActivity(bankPortalIntent);
+        });
+
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        updateBalance();
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        updateBalance();
     }
 }

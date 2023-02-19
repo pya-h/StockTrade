@@ -16,10 +16,10 @@ public class CustomerCard extends AppCompatActivity {
         setContentView(R.layout.activity_customer_card);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
-        Stock bought[] = {new Stock("DogeCoin", "-123.50"),
-                new Stock("Pepe", "13.50"),
-                new Stock("PewDew", "163.75"),
-                new Stock("Samshlong", "69.69"),
+        Stock bought[] = {new Stock("DogeCoin", -123.50f),
+                new Stock("Pepe", 13.50f),
+                new Stock("PewDew", 163.75f),
+                new Stock("Samshlong", 69.69f),
         };
 
         ListView lstView = (ListView) findViewById(R.id.listview_stocks);

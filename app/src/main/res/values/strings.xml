@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Stock Trading Simplified.</string>
+    <string name="app_name">Stock Trade</string>
     <string name="textview_balance">Balance: %.2f $</string>
     <string name="button_goto_bank_portal">Bank Portal</string>
     <string name="button_goto_stock_trade">Stock Trade</string>
@@ -8,4 +8,10 @@
     <string name="str_stock">Stock</string>
     <string name="button_buy">Buy</string>
     <string name="button_sell">Sell</string>
+    <string name="str_add_money_hint">Add money into your account…</string>
+    <string name="str_bank_name">Bank Name</string>
+    <string name="hint_enter_bank_name">Enter bank name…</string>
+    <string name="hint_invest_amount">How much do you invest?</string>
+    <string name="str_amount">Amount</string>
+    <string name="str_invest">Invest!</string>
 </resources>

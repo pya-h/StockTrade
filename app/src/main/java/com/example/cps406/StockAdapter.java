@@ -53,40 +53,35 @@ public class StockAdapter extends BaseAdapter{
         Button buyButton = (Button) view.findViewById(R.id.button_buy);
         Button sellButton = (Button) view.findViewById(R.id.button_sell);
 
-        buyButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        buyButton.setOnClickListener(view12 -> {
 
-                try {
-                    customer.buy(stocks[i]);
-                    if(parentActivity != null)
-                        parentActivity.updateBalance();
-                    Toast.makeText(context.getApplicationContext(), stocks[i].getName() + " has been bought for " + stocks[i].getPrice() + ".", Toast.LENGTH_LONG).show();
-                } catch (StockException ex) {
-                    Toast.makeText(context.getApplicationContext(), ex.getMessage(), Toast.LENGTH_SHORT).show();
+            try {
+                customer.buy(stocks[i]);
+                if(parentActivity != null)
+                    parentActivity.updateBalance();
+                Toast.makeText(context.getApplicationContext(), stocks[i].getName() + " has been bought for " + stocks[i].getPrice() + ".", Toast.LENGTH_LONG).show();
+            } catch (StockException ex) {
+                Toast.makeText(context.getApplicationContext(), ex.getMessage(), Toast.LENGTH_SHORT).show();
 
-                }
             }
         });
 
-        sellButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                try {
-                    customer.sell(stocks[i]);
-                    if(parentActivity != null)
-                        parentActivity.updateBalance();
-                    Toast.makeText(context.getApplicationContext(), stocks[i].getName() + " has been sold for " + stocks[i].getPrice() + ".", Toast.LENGTH_SHORT).show();
-                } catch (StockException ex) {
-                    Toast.makeText(context.getApplicationContext(), ex.getMessage(), Toast.LENGTH_SHORT).show();
-
-                }
+        sellButton.setOnClickListener(view1 -> {
+            try {
+                customer.sell(stocks[i]);
+                if(parentActivity != null)
+                    parentActivity.updateBalance();
+                Toast.makeText(context.getApplicationContext(), stocks[i].getName() + " has been sold for " +
+                        stocks[i].getPrice() + ".", Toast.LENGTH_SHORT).show();
+            } catch (StockException ex) {
+                Toast.makeText(context.getApplicationContext(), ex.getMessage(), Toast.LENGTH_SHORT).show();
 
             }
+
         });
 
         stockNameTextView.setText(stocks[i].getName());
-        stockPriceTextView.setText(stocks[i].getPrice());
+        stockPriceTextView.setText(String.valueOf(stocks[i].getPrice()));
         return view;
 
     }

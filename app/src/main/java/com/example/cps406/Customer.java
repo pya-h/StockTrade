@@ -5,7 +5,7 @@ import static java.lang.Float.parseFloat;
 import java.util.ArrayList;
 import java.util.List;
 
-class Customer implements Actor {
+class Customer {
     private static Customer Current;
     private float balance;
     private String name;
@@ -28,39 +28,38 @@ class Customer implements Actor {
     }
 
     public static Customer register(String name, String information) {
-        Current = new Customer(100.0f, name, information);
+        Current = new Customer(0.0f, name, information);
         return Current;
     }
 
-    @Override
     public float getBalance() {
 
         return balance;
     }
 
-    @Override
     public void setBalance(float balance) {
 
         this.balance = balance;
     }
 
-    @Override
     public String getName() {
 
         return name;
     }
 
-    @Override
     public void setName(String name) {
 
         this.name = name;
     }
 
-
-
+    public void invest(float amount) throws StockException {
+        if(amount <= 0)
+            throw new StockException("Investment amount must be positive and valid1");
+        this.balance += amount;
+    }
     public void buy(Stock stock) throws StockException {
-        if (balance >= parseFloat(stock.getPrice())) {
-            balance -= parseFloat(stock.getPrice());
+        if (balance >= stock.getPrice()) {
+            balance -= stock.getPrice();
             bought.add(stock);
         }
         else
@@ -69,7 +68,7 @@ class Customer implements Actor {
 
     public void sell(Stock stock) throws StockException {
         if (bought.contains(stock)) {
-            balance += parseFloat(stock.getPrice());
+            balance += stock.getPrice();
             bought.remove(stock);
             bought.add(stock);
         }

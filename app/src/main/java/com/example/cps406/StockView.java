@@ -15,8 +15,6 @@ public class StockView extends AppCompatActivity {
         setContentView(R.layout.activity_stockview);
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.activity_app_bar);
-        String balanceval = getIntent().getStringExtra("balance");
-
 
     }
 }
