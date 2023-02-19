@@ -18,8 +18,10 @@
         android:layout_weight="1"
         android:text="@string/str_stock"
 
+        android:textColor="#BC00DC"
         android:textFontWeight="@integer/material_motion_duration_medium_1"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textview_stock_price"
@@ -28,19 +30,26 @@
         android:layout_marginStart="2dp"
         android:layout_weight="1"
 
+        android:gravity="center"
         android:text="@string/str_price"
-        android:textSize="18sp" />
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/button_buy"
+        style="@android:style/Widget.Material.Light.Button.Toggle"
         android:layout_width="100sp"
         android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_baseline_add_shopping_cart_24"
         android:text="@string/button_buy" />
 
     <Button
         android:id="@+id/button_sell"
+        style="@android:style/Widget.Material.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_baseline_shopping_cart_checkout_24"
         android:text="@string/button_sell" />
 
 </LinearLayout>

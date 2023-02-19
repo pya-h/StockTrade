@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private static Customer customer;
 
     public void updateBalance() {
-        balanceTextview.setText(String.format(getString(R.string.textview_balance), customer.getBalance()));
+        balanceTextview.setText(String.format(getString(R.string.textview_balance), customer != null ? customer.getBalance() : 0.0f));
 
     }
     @Override

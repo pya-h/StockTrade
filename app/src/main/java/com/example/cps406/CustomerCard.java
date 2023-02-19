@@ -22,10 +22,15 @@ public class CustomerCard extends AppCompatActivity {
                 new Stock("Samshlong", 69.69f),
         };
 
-        ListView lstView = (ListView) findViewById(R.id.listview_stocks);
-        TextView balance = (TextView) findViewById(R.id.customerBalance);
-        StockAdapter stc = new StockAdapter(getApplicationContext(),bought, null);
-        lstView.setAdapter(stc);
+        ListView stocksListView = (ListView) findViewById(R.id.listview_stocks);
+        TextView balanceTextView = (TextView) findViewById(R.id.textview_customer_balance);
+
+        TextView customerNameTextView = (TextView) findViewById(R.id.textview_customer_name);
+        Customer customer = Customer.get();
+        balanceTextView.setText(customer.getBalance() + " $");
+        customerNameTextView.setText(customer.getName());
+        StockAdapter stockAdapter = new StockAdapter(getApplicationContext(), bought, null);
+        stocksListView.setAdapter(stockAdapter);
 
     }
 }

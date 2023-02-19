@@ -53,7 +53,7 @@ public class StockAdapter extends BaseAdapter{
         Button buyButton = (Button) view.findViewById(R.id.button_buy);
         Button sellButton = (Button) view.findViewById(R.id.button_sell);
 
-        buyButton.setOnClickListener(view12 -> {
+        buyButton.setOnClickListener(v -> {
 
             try {
                 customer.buy(stocks[i]);
@@ -66,7 +66,7 @@ public class StockAdapter extends BaseAdapter{
             }
         });
 
-        sellButton.setOnClickListener(view1 -> {
+        sellButton.setOnClickListener(v -> {
             try {
                 customer.sell(stocks[i]);
                 if(parentActivity != null)
@@ -81,7 +81,7 @@ public class StockAdapter extends BaseAdapter{
         });
 
         stockNameTextView.setText(stocks[i].getName());
-        stockPriceTextView.setText(String.valueOf(stocks[i].getPrice()));
+        stockPriceTextView.setText(String.valueOf(stocks[i].getPrice()) + "$");
         return view;
 
     }

@@ -1,6 +1,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/background"
+
     android:orientation="vertical">
 
     <ImageView
@@ -8,34 +10,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/ic_launcher_foreground"
+        android:src="@drawable/customerexample"
         android:layout_marginBottom="5dp"/>
 
     <TextView
-        android:id="@+id/customerName"
+        android:id="@+id/textview_customer_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Aaryaman"
-        android:textSize="20sp"
         android:gravity="center_horizontal"
-        android:padding="10dp" />
+        android:padding="10dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/customerBalance"
+        android:id="@+id/textview_customer_balance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
         android:text="75 Cents"
-        android:textSize="16sp"
-        android:gravity="center_horizontal"
-        android:padding="10dp" />
+        android:textColor="#000000"
+        android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/stocktext"
+        android:id="@+id/textview_stocks_list_bought"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:padding="10dp"
         android:text="List of Bought Stocks"
+        android:textColor="#000000"
         android:textSize="20sp" />
 
     <ListView

@@ -5,48 +5,56 @@
     android:id="@+id/main_linear_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:layout_marginHorizontal="20dp"
+    android:padding="20dp"
+    android:background="@drawable/background"
 
+    android:gravity="center"
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/textview_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_marginVertical="10dp"
+        android:gravity="center"
         android:text="@string/str_anonymous"
-        android:id="@+id/textview_username" />
+        android:textColor="#9A66F8"
+        android:textSize="20sp" />
+
     <TextView
+        android:id="@+id/textview_balance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
         android:gravity="center"
         android:text="@string/textview_balance"
-        android:layout_marginVertical="10dp"
-
-        android:id="@+id/textview_balance" />
+        android:textColor="#09AB77"
+        android:textSize="20sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="10dp"
-
         android:orientation="horizontal">
+
         <Button
+            android:id="@+id/button_goto_stock_trade"
+            style="@android:style/Widget.Holo.Light.Button.Inset"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginEnd="5dp"
-            android:text="@string/button_goto_stock_trade"
 
-            android:id="@+id/button_goto_stock_trade" />
+            android:layout_weight="1"
+            android:text="@string/button_goto_stock_trade" />
+
         <Button
+            android:id="@+id/button_goto_bank_portal"
+            style="@android:style/Widget.Holo.Light.Button.Inset"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginStart="5dp"
-            android:text="@string/button_goto_bank_portal"
 
-            android:id="@+id/button_goto_bank_portal" />
+            android:layout_weight="1"
+            android:text="@string/button_goto_bank_portal" />
     </LinearLayout>
 </LinearLayout>

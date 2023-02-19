@@ -5,6 +5,7 @@
     android:id="@+id/linear_layout_stocks_list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:orientation="vertical">
 
     <LinearLayout
@@ -18,16 +19,20 @@
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:contentDescription="Customer Image"
-            android:visibility="visible"
-            tools:srcCompat="@drawable/customerexample" />
+            android:scaleType="fitXY"
+            android:src="@drawable/customerexample"
+            android:visibility="visible" />
 
         <TextView
             android:id="@+id/textview_balance"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_marginStart="10dp"
 
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
             android:text="@string/textview_balance"
+            android:textColor="#009688"
             android:textSize="23sp" />
 
 
