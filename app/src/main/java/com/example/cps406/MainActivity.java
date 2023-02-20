@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        customer = Customer.register("test", "whatever");
+        customer = Customer.get();
         usernameTextView = findViewById(R.id.textview_username);
         usernameTextView.setText(customer.getName());
         balanceTextview = findViewById(R.id.textview_balance);

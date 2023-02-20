@@ -14,4 +14,8 @@
     <string name="hint_invest_amount">How much do you invest?</string>
     <string name="str_amount">Amount</string>
     <string name="str_invest">Invest!</string>
+    <string name="str_login">Login</string>
+    <string name="str_username">Username</string>
+    <string name="str_password">Password</string>
+    <string name="str_forgot_password">Forgot Password</string>
 </resources>

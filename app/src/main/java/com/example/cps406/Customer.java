@@ -3,7 +3,9 @@ package com.example.cps406;
 import static java.lang.Float.parseFloat;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 class Customer {
     private static Customer Current;
@@ -11,6 +13,7 @@ class Customer {
     private String name;
     private List<Stock> bought;
     private List<Stock> sold;
+    private static Map<String, String> TestUsers = new HashMap<>();
 
     private Customer(float balance, String name, String information) {
         this.balance = balance;
@@ -20,11 +23,27 @@ class Customer {
         this.sold = new ArrayList<Stock>();
     }
 
+    private static void InitTest() {
+        if(TestUsers == null)
+            TestUsers = new HashMap<>();
+        TestUsers.put("test", "test");
+        TestUsers.put("Ali", "123");
+        TestUsers.put("Reza", "666");
+        TestUsers.put("Paya", "419");
+        TestUsers.put("Tool", "Maynard");
+
+    }
     public static Customer get() {
         return Current;
     }
-    public static Customer logIn(String name) {
-        return null;
+    public static Customer logIn(String username, String password) throws CustomerException {
+        if(TestUsers == null || TestUsers.size() == 0)
+            InitTest();
+        Current = null;
+        if(!TestUsers.containsKey(username) || !TestUsers.get(username).equals(password))
+            throw new CustomerException("Username or password is incorrect!");
+        Current = new Customer(0.0f, username, "");
+        return Current;
     }
 
     public static Customer register(String name, String information) {
